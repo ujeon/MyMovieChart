@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20D1E2626B379310061B883 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20D1E2526B379310061B883 /* MovieCell.swift */; };
+		F20D1E3126B384160061B883 /* rain.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F20D1E2E26B384160061B883 /* rain.jpeg */; };
+		F20D1E3226B384160061B883 /* secret.gif in Resources */ = {isa = PBXBuildFile; fileRef = F20D1E2F26B384160061B883 /* secret.gif */; };
+		F20D1E3326B384160061B883 /* darkknight.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F20D1E3026B384160061B883 /* darkknight.jpeg */; };
 		F271127C26B2325D00A84D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271127B26B2325D00A84D59 /* AppDelegate.swift */; };
 		F271127E26B2325D00A84D59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271127D26B2325D00A84D59 /* SceneDelegate.swift */; };
 		F271128026B2325D00A84D59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271127F26B2325D00A84D59 /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F20D1E2526B379310061B883 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		F20D1E2E26B384160061B883 /* rain.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rain.jpeg; sourceTree = "<group>"; };
+		F20D1E2F26B384160061B883 /* secret.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = secret.gif; sourceTree = "<group>"; };
+		F20D1E3026B384160061B883 /* darkknight.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = darkknight.jpeg; sourceTree = "<group>"; };
 		F271127826B2325D00A84D59 /* MyMovieChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F271127B26B2325D00A84D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F271127D26B2325D00A84D59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F20D1E2D26B383FD0061B883 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F20D1E3026B384160061B883 /* darkknight.jpeg */,
+				F20D1E2E26B384160061B883 /* rain.jpeg */,
+				F20D1E2F26B384160061B883 /* secret.gif */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F271126F26B2325D00A84D59 = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +78,12 @@
 		F271127A26B2325D00A84D59 /* MyMovieChart */ = {
 			isa = PBXGroup;
 			children = (
+				F20D1E2D26B383FD0061B883 /* Resources */,
 				F271127B26B2325D00A84D59 /* AppDelegate.swift */,
 				F271127D26B2325D00A84D59 /* SceneDelegate.swift */,
 				F271127F26B2325D00A84D59 /* ViewController.swift */,
 				F271128126B2325D00A84D59 /* Main.storyboard */,
+				F20D1E2526B379310061B883 /* MovieCell.swift */,
 				F271129326B238C100A84D59 /* MovieVO.swift */,
 				F271129026B233B900A84D59 /* ListViewController.swift */,
 				F271128426B2325F00A84D59 /* Assets.xcassets */,
@@ -133,6 +153,9 @@
 				F271128826B2325F00A84D59 /* LaunchScreen.storyboard in Resources */,
 				F271128526B2325F00A84D59 /* Assets.xcassets in Resources */,
 				F271128326B2325D00A84D59 /* Main.storyboard in Resources */,
+				F20D1E3126B384160061B883 /* rain.jpeg in Resources */,
+				F20D1E3326B384160061B883 /* darkknight.jpeg in Resources */,
+				F20D1E3226B384160061B883 /* secret.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +168,7 @@
 			files = (
 				F271128026B2325D00A84D59 /* ViewController.swift in Sources */,
 				F271127C26B2325D00A84D59 /* AppDelegate.swift in Sources */,
+				F20D1E2626B379310061B883 /* MovieCell.swift in Sources */,
 				F271129126B233B900A84D59 /* ListViewController.swift in Sources */,
 				F271127E26B2325D00A84D59 /* SceneDelegate.swift in Sources */,
 				F271129426B238C100A84D59 /* MovieVO.swift in Sources */,
