@@ -19,20 +19,22 @@ class ListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = self.list[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! MovieCell
-        let url: URL! = URL(string: row.thumbnail!)
-        let imageData = try! Data(contentsOf: url)
         
         cell.title.text = row.title
         cell.desc.text = row.description
         cell.opendate.text = row.opendate
         cell.rating.text = "\(row.rating!)"
-        cell.thumbnail.image = UIImage(data: imageData)
+        
+        DispatchQueue.main.async {
+            cell.thumbnail.image = self.getThumbnailImage(indexPath.row)
+        }
+       
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        NSLog("선택된 행은 \(indexPath.row) 번째 행입니다")
+       
     }
     
     @IBAction func more(_ sender: Any) {
@@ -42,8 +44,21 @@ class ListViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    func getThumbnailImage(_ index: Int) -> UIImage {
+        let mvo = self.list[index]
+        
+        if let savedImage = mvo.thumbnailImage {
+            return savedImage
+        } else { 
+            let url: URL! = URL(string: mvo.thumbnail!)
+            let imageData = try! Data(contentsOf: url)
+            mvo.thumbnailImage = UIImage(data: imageData)
+            return mvo.thumbnailImage!
+        }
+    }
+    
     func callMovieAPI() {
-        let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=\(self.page)&count=10&genreId=&order=releasedateasc"
+        let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=\(self.page)&count=30&genreId=&order=releasedateasc"
         let apiURI: URL! = URL(string: url)
         
         do {
@@ -64,6 +79,10 @@ class ListViewController: UITableViewController {
                 mvo.detail = r["linkUrl"] as? String
                 mvo.rating = ((r["ratingAverage"] as! NSString).doubleValue)
                 
+                let url: URL! = URL(string: mvo.thumbnail!)
+                let imageData = try! Data(contentsOf: url)
+                mvo.thumbnailImage = UIImage(data: imageData)
+                
                 self.list.append(mvo)
             }
             
@@ -72,6 +91,18 @@ class ListViewController: UITableViewController {
             }
         } catch {
             NSLog("오류 발생!")
+        }
+    }
+}
+
+extension ListViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue_detail" {
+            let cell = sender as! MovieCell
+            let path = self.tableView.indexPath(for: cell)
+            let movieInfo = self.list[path!.row]
+            let detailVC = segue.destination as? DetailViewController
+            detailVC?.mvo = movieInfo
         }
     }
 }
