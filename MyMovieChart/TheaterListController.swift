@@ -53,4 +53,17 @@ class TheaterListController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        NSLog("\(segue)")
+        if segue.identifier == "segue_map" {
+            let path = self.tableView.indexPath(for: sender as! UITableViewCell)
+            let data = self.list[path!.row]
+            (segue.destination as? TheaterViewController)?.param = data
+        }
+    }
 }

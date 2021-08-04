@@ -66,7 +66,6 @@ extension DetailViewController: WKNavigationDelegate {
 
 extension UIViewController {
     func alert(_ message: String, onClick: (() -> Void)? = nil) {
-        NSLog("얼럿?!")
         let alert = UIAlertController(title: "오류", message: "상세페이지를 읽어오지 못했습니다", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "확인", style: .cancel) { (_) in
             onClick?()
