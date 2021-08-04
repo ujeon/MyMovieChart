@@ -20,6 +20,10 @@
 		F271129126B233B900A84D59 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271129026B233B900A84D59 /* ListViewController.swift */; };
 		F271129426B238C100A84D59 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271129326B238C100A84D59 /* MovieVO.swift */; };
 		F29C725626B90CFE00CC3FF9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C725526B90CFE00CC3FF9 /* DetailViewController.swift */; };
+		F2AFFBBF26BA23AE00A2AE80 /* ListOutline @3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2AFFBBD26BA23AE00A2AE80 /* ListOutline @3x.png */; };
+		F2AFFBC026BA23AE00A2AE80 /* TicketOutline @3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2AFFBBE26BA23AE00A2AE80 /* TicketOutline @3x.png */; };
+		F2AFFBC326BA27FA00A2AE80 /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AFFBC226BA27FA00A2AE80 /* TheaterCell.swift */; };
+		F2AFFBC626BA288A00A2AE80 /* TheaterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AFFBC526BA288A00A2AE80 /* TheaterListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		F271129026B233B900A84D59 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F271129326B238C100A84D59 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
 		F29C725526B90CFE00CC3FF9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F2AFFBBD26BA23AE00A2AE80 /* ListOutline @3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ListOutline @3x.png"; sourceTree = "<group>"; };
+		F2AFFBBE26BA23AE00A2AE80 /* TicketOutline @3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TicketOutline @3x.png"; sourceTree = "<group>"; };
+		F2AFFBC226BA27FA00A2AE80 /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
+		F2AFFBC526BA288A00A2AE80 /* TheaterListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 		F20D1E2D26B383FD0061B883 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F2AFFBBD26BA23AE00A2AE80 /* ListOutline @3x.png */,
+				F2AFFBBE26BA23AE00A2AE80 /* TicketOutline @3x.png */,
 				F20D1E3026B384160061B883 /* darkknight.jpeg */,
 				F20D1E2E26B384160061B883 /* rain.jpeg */,
 				F20D1E2F26B384160061B883 /* secret.gif */,
@@ -85,6 +95,8 @@
 				F271127D26B2325D00A84D59 /* SceneDelegate.swift */,
 				F271127F26B2325D00A84D59 /* ViewController.swift */,
 				F271128126B2325D00A84D59 /* Main.storyboard */,
+				F2AFFBC226BA27FA00A2AE80 /* TheaterCell.swift */,
+				F2AFFBC526BA288A00A2AE80 /* TheaterListController.swift */,
 				F29C725526B90CFE00CC3FF9 /* DetailViewController.swift */,
 				F20D1E2526B379310061B883 /* MovieCell.swift */,
 				F271129326B238C100A84D59 /* MovieVO.swift */,
@@ -155,10 +167,12 @@
 			files = (
 				F271128826B2325F00A84D59 /* LaunchScreen.storyboard in Resources */,
 				F271128526B2325F00A84D59 /* Assets.xcassets in Resources */,
+				F2AFFBBF26BA23AE00A2AE80 /* ListOutline @3x.png in Resources */,
 				F271128326B2325D00A84D59 /* Main.storyboard in Resources */,
 				F20D1E3126B384160061B883 /* rain.jpeg in Resources */,
 				F20D1E3326B384160061B883 /* darkknight.jpeg in Resources */,
 				F20D1E3226B384160061B883 /* secret.gif in Resources */,
+				F2AFFBC026BA23AE00A2AE80 /* TicketOutline @3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,9 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F271128026B2325D00A84D59 /* ViewController.swift in Sources */,
+				F2AFFBC326BA27FA00A2AE80 /* TheaterCell.swift in Sources */,
 				F271127C26B2325D00A84D59 /* AppDelegate.swift in Sources */,
 				F20D1E2626B379310061B883 /* MovieCell.swift in Sources */,
 				F271129126B233B900A84D59 /* ListViewController.swift in Sources */,
+				F2AFFBC626BA288A00A2AE80 /* TheaterListController.swift in Sources */,
 				F271127E26B2325D00A84D59 /* SceneDelegate.swift in Sources */,
 				F271129426B238C100A84D59 /* MovieVO.swift in Sources */,
 				F29C725626B90CFE00CC3FF9 /* DetailViewController.swift in Sources */,

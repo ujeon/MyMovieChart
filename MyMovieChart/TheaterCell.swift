@@ -1,8 +1,8 @@
-//
-//  TheaterCell.swift
-//  MyMovieChart
-//
-//  Created by 장우전 on 2021/08/04.
-//
+import UIKit
 
-import Foundation
+class TheaterCell: UITableViewCell {
+    
+    @IBOutlet var name: UILabel!
+    @IBOutlet var addr: UILabel!
+    @IBOutlet var tel: UILabel!
+}

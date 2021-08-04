@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QME-2W-hX5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AJ0-4d-kEW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -95,7 +95,81 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnj-zb-IT5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923.1884057971015" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1833.3333333333335" y="137.94642857142856"/>
+        </scene>
+        <!--영화관 정보-->
+        <scene sceneID="P8G-tz-aIT">
+            <objects>
+                <tableViewController id="3Sg-AZ-kCY" customClass="TheaterListController" customModule="MyMovieChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ghW-t1-G7m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tCell" rowHeight="67" id="Q1C-gB-U5c" customClass="TheaterCell" customModule="MyMovieChart" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q1C-gB-U5c" id="bPb-qj-aaQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="67"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상영관명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR0-5a-ZRc">
+                                            <rect key="frame" x="16" y="9" width="187" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v90-5H-Fc4">
+                                            <rect key="frame" x="16" y="35" width="261" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="연락처" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ws7-GK-uj6">
+                                            <rect key="frame" x="235" y="11" width="140" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addr" destination="v90-5H-Fc4" id="agM-hU-XZg"/>
+                                    <outlet property="name" destination="cR0-5a-ZRc" id="KpK-aO-NeQ"/>
+                                    <outlet property="tel" destination="ws7-GK-uj6" id="o9W-wM-7eQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Sg-AZ-kCY" id="onc-gN-3zv"/>
+                            <outlet property="delegate" destination="3Sg-AZ-kCY" id="C04-sA-qyo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="영화관 정보" id="8xK-BG-Az6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovf-9R-Csm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831.8840579710147" y="865.84821428571422"/>
+        </scene>
+        <!--영화관-->
+        <scene sceneID="fbR-fH-Kkw">
+            <objects>
+                <navigationController id="xVW-6b-bQs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="영화관" image="TicketOutline .png" id="1Mz-5A-sHK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WO3-v4-C0u">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Sg-AZ-kCY" kind="relationship" relationship="rootViewController" id="iAf-Cf-d76"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6K-XV-bKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003" y="866"/>
         </scene>
         <!--Title-->
         <scene sceneID="GoK-BU-lTn">
@@ -131,12 +205,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvL-yo-ww4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928" y="138"/>
+            <point key="canvasLocation" x="2837.68115942029" y="137.94642857142856"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--영화 차트-->
         <scene sceneID="W8O-37-vMr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QME-2W-hX5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="영화 차트" image="ListOutline .png" id="a5a-Un-z8q"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3hi-EX-Nfn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -149,10 +224,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7A-xO-d4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="923.1884057971015" y="137.94642857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="d5i-ew-PRH">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AJ0-4d-kEW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pGw-H2-uQ8">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QME-2W-hX5" kind="relationship" relationship="viewControllers" id="pGN-pL-tNg"/>
+                        <segue destination="xVW-6b-bQs" kind="relationship" relationship="viewControllers" id="EVL-pL-yve"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhz-DV-VXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="13.043478260869566" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ListOutline .png" width="10" height="10"/>
+        <image name="TicketOutline .png" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
